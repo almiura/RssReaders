@@ -37,4 +37,24 @@ class RssReader extends RssReadersAppModel {
 			'order' => ''
 		)
 	);
+
+/**
+ * the latest content data
+ *
+ * @param int $blockId blocks.id
+ * @return array $contentData
+ */
+	public function getContent($blockId) {
+		$contentData = $this->find(
+			'first',
+			array(
+				'conditions' => array(
+					'block_id' => $blockId
+				),
+				'order' => array($this->name . '.id DESC')
+			)
+		);
+
+		return $contentData;
+	}
 }

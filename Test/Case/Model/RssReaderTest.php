@@ -64,4 +64,16 @@ class RssReaderTest extends CakeTestCase {
 		$this->assertTrue(is_array($rtn));
 	}
 
+/**
+ * testGetContent
+ *
+ * @return void
+ */
+	public function testGetContent() {
+		$blockId = 1;
+		$rssData = $this->RssReader->getContent($blockId);
+
+		$this->assertEqual($rssData['BlocksRssReader']['block_id'], $blockId);
+	}
+
 }
