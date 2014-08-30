@@ -2,7 +2,7 @@
 /**
  * FrameFixture
  *
- * @author   Takako Miyagawa <nekoget@gmail.com>
+ * @author   Kosuke Miura <k_miura@zenk.co.jp>
  * @link     http://www.netcommons.org NetCommons Project
  * @license  http://www.netcommons.org/license.txt NetCommons License
  */
