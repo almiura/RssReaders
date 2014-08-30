@@ -24,6 +24,7 @@ class CreateRssReadersTable extends CakeMigration {
 					'modified_user_id' => array('type' => 'integer', 'null' => true, 'default' => null),
 					'modified' => array('type' => 'datetime', 'null' => true, 'default' => null),
 					'indexes' => array(
+						'PRIMARY' => array('column' => 'id', 'unique' => 1)
 					),
 					'tableParameters' => array('charset' => 'utf8', 'collate' => 'utf8_general_ci', 'engine' => 'InnoDB'),
 				),
@@ -37,7 +38,9 @@ class CreateRssReadersTable extends CakeMigration {
 					'created' => array('type' => 'datetime', 'null' => true, 'default' => null),
 					'modified_user_id' => array('type' => 'integer', 'null' => true, 'default' => null, 'comment' => 'æœªãƒ­ã‚°ã‚¤ãƒ³ã®äºº:0 ãƒ­ã‚°ã‚¤ãƒ³ã—ã¦ã‚‹äºº:users.id'),
 					'modified' => array('type' => 'datetime', 'null' => true, 'default' => null),
-					'indexes' => array(),
+					'indexes' => array(
+						'PRIMARY' => array('column' => 'id', 'unique' => 1)
+					),
 					'tableParameters' => array('charset' => 'utf8', 'collate' => 'utf8_general_ci', 'engine' => 'InnoDB')
 				)
 			),
