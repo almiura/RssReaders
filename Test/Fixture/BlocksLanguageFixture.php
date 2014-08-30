@@ -1,16 +1,16 @@
 <?php
 /**
- * LanguageFixture
+ * BlocksLanguageFixture
  *
- * @author   Kosuke Miura <topaz2@m0n0m0n0.com>
+ * @author   Takako Miyagawa <nekoget@gmail.com>
  * @link     http://www.netcommons.org NetCommons Project
  * @license  http://www.netcommons.org/license.txt NetCommons License
  */
 
 /**
- * Summary for LanguageFixture
+ * Summary for BlocksLanguageFixture
  */
-class LanguageFixture extends CakeTestFixture {
+class BlocksLanguageFixture extends CakeTestFixture {
 
 /**
  * Import
@@ -26,9 +26,9 @@ class LanguageFixture extends CakeTestFixture {
  */
 	public $fields = array(
 		'id' => array('type' => 'integer', 'null' => false, 'default' => null, 'key' => 'primary'),
-		'code' => array('type' => 'string', 'null' => true, 'default' => null, 'length' => 3, 'collate' => 'utf8_general_ci', 'charset' => 'utf8'),
-		'weight' => array('type' => 'integer', 'null' => true, 'default' => null),
-		'is_active' => array('type' => 'boolean', 'null' => true, 'default' => null),
+		'block_id' => array('type' => 'integer', 'null' => false, 'default' => null),
+		'language_id' => array('type' => 'integer', 'null' => false, 'default' => null),
+		'name' => array('type' => 'string', 'null' => true, 'default' => null, 'collate' => 'utf8_general_ci', 'charset' => 'utf8'),
 		'created_user_id' => array('type' => 'integer', 'null' => true, 'default' => null),
 		'created' => array('type' => 'datetime', 'null' => true, 'default' => null),
 		'modified_user_id' => array('type' => 'integer', 'null' => true, 'default' => null),

@@ -2,38 +2,30 @@
 /**
  * RssReaderFixture
  *
- * @author Noriko Arai <arai@nii.ac.jp>
- * @author Kosuke Miura <k_miura@zenk.co.jp>
- * @link http://www.netcommons.org NetCommons Project
- * @license http://www.netcommons.org/license.txt NetCommons License
- * @copyright Copyright 2014, NetCommons Project
- * @package app.Plugin.RssReaders.Test.Model.Fixture
+ * @author   Kosuke Miura <topaz2@m0n0m0n0.com>
+ * @link     http://www.netcommons.org NetCommons Project
+ * @license  http://www.netcommons.org/license.txt NetCommons License
  */
 
 /**
- * RssReaderFixture
- *
- * @author Kosuke Miura <k_miura@zenk.co.jp>
- * @package app.Plugin.RssReaders.Model
+ * Summary for RssReaderFixture
  */
 class RssReaderFixture extends CakeTestFixture {
 
 /**
  * Fields
  *
- * @author Kosuke Miura <k_miura@zenk.co.jp>
  * @var array
  */
 	public $fields = array(
 		'id' => array('type' => 'integer', 'null' => false, 'default' => null, 'key' => 'primary'),
-		'rss_readers_block_id' => array('type' => 'integer', 'null' => false, 'default' => null),
-		'status' => array('type' => 'integer', 'null' => false, 'default' => '1', 'length' => 3),
-		'language_id' => array('type' => 'integer', 'null' => false, 'default' => '1'),
-		'title' => array('type' => 'string', 'null' => true, 'default' => null, 'collate' => 'utf8_general_ci', 'charset' => 'utf8'),
-		'content' => array('type' => 'text', 'null' => true, 'default' => null, 'collate' => 'utf8_general_ci', 'charset' => 'utf8'),
-		'created_user' => array('type' => 'integer', 'null' => true, 'default' => null),
+		'blocks_rss_reader_id' => array('type' => 'integer', 'null' => true, 'default' => null),
+		'url' => array('type' => 'text', 'null' => true, 'default' => null, 'collate' => 'utf8_general_ci', 'comment' => 'RSSå–å¾—URL', 'charset' => 'utf8'),
+		'status' => array('type' => 'integer', 'null' => true, 'default' => null, 'length' => 1, 'comment' => 'çŠ¶æ…‹'),
+		'rss' => array('type' => 'text', 'null' => true, 'default' => null, 'collate' => 'utf8_general_ci', 'comment' => 'RSSæœ¬æ–‡', 'charset' => 'utf8'),
+		'created_user_id' => array('type' => 'integer', 'null' => true, 'default' => null),
 		'created' => array('type' => 'datetime', 'null' => true, 'default' => null),
-		'modified_user' => array('type' => 'integer', 'null' => true, 'default' => null),
+		'modified_user_id' => array('type' => 'integer', 'null' => true, 'default' => null, 'comment' => 'æœªãƒ­ã‚°ã‚¤ãƒ³ã®äºº:0 ãƒ­ã‚°ã‚¤ãƒ³ã—ã¦ã‚‹äºº:users.id'),
 		'modified' => array('type' => 'datetime', 'null' => true, 'default' => null),
 		'indexes' => array(
 			'PRIMARY' => array('column' => 'id', 'unique' => 1)
@@ -44,17 +36,19 @@ class RssReaderFixture extends CakeTestFixture {
 /**
  * Records
  *
- * @author Kosuke Miura <k_miura@zenk.co.jp>
  * @var array
  */
 	public $records = array(
 		array(
 			'id' => 1,
-			'rss_readers_block_id' => 1,
+			'blocks_rss_reader_id' => 1,
+			'url' => 'Lorem ipsum dolor sit amet, aliquet feugiat. Convallis morbi fringilla gravida, phasellus feugiat dapibus velit nunc, pulvinar eget sollicitudin venenatis cum nullam, vivamus ut a sed, mollitia lectus. Nulla vestibulum massa neque ut et, id hendrerit sit, feugiat in taciti enim proin nibh, tempor dignissim, rhoncus duis vestibulum nunc mattis convallis.',
 			'status' => 1,
-			'language_id' => 1,
-			'title' => 'Lorem ipsum dolor sit amet',
-			'content' => 'Lorem ipsum dolor sit amet, aliquet feugiat. Convallis morbi fringilla gravida, phasellus feugiat dapibus velit nunc, pulvinar eget sollicitudin venenatis cum nullam, vivamus ut a sed, mollitia lectus. Nulla vestibulum massa neque ut et, id hendrerit sit, feugiat in taciti enim proin nibh, tempor dignissim, rhoncus duis vestibulum nunc mattis convallis.',
+			'rss' => 'Lorem ipsum dolor sit amet, aliquet feugiat. Convallis morbi fringilla gravida, phasellus feugiat dapibus velit nunc, pulvinar eget sollicitudin venenatis cum nullam, vivamus ut a sed, mollitia lectus. Nulla vestibulum massa neque ut et, id hendrerit sit, feugiat in taciti enim proin nibh, tempor dignissim, rhoncus duis vestibulum nunc mattis convallis.',
+			'created_user_id' => 1,
+			'created' => '2014-08-30 06:19:18',
+			'modified_user_id' => 1,
+			'modified' => '2014-08-30 06:19:18'
 		),
 	);
 

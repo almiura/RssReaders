@@ -1,6 +1,6 @@
 <?php
 /**
- * PartFixture
+ * UserFixture
  *
  * @author   Takako Miyagawa <nekoget@gmail.com>
  * @link     http://www.netcommons.org NetCommons Project
@@ -8,9 +8,9 @@
  */
 
 /**
- * Summary for PartFixture
+ * Summary for UserFixture
  */
-class PartFixture extends CakeTestFixture {
+class UserFixture extends CakeTestFixture {
 
 /**
  * Import
@@ -26,7 +26,9 @@ class PartFixture extends CakeTestFixture {
  */
 	public $fields = array(
 		'id' => array('type' => 'integer', 'null' => false, 'default' => null, 'key' => 'primary'),
-		'type' => array('type' => 'integer', 'null' => true, 'default' => null),
+		'username' => array('type' => 'string', 'null' => true, 'default' => null, 'collate' => 'utf8_general_ci', 'charset' => 'utf8'),
+		'password' => array('type' => 'string', 'null' => true, 'default' => null, 'collate' => 'utf8_general_ci', 'charset' => 'utf8'),
+		'role_id' => array('type' => 'integer', 'null' => false, 'default' => null),
 		'created_user_id' => array('type' => 'integer', 'null' => true, 'default' => null),
 		'created' => array('type' => 'datetime', 'null' => true, 'default' => null),
 		'modified_user_id' => array('type' => 'integer', 'null' => true, 'default' => null),
@@ -45,43 +47,23 @@ class PartFixture extends CakeTestFixture {
 	public $records = array(
 		array(
 			'id' => '1',
-			'type' => '2',
+			'username' => 'admin',
+			'password' => 'f14c95a14885415b30c8f3cd7603da0cfce5acdebaac646ee7c9b6928243e1f7871dde7eeb273de6314e431684723623490b7ce144697e00473872f01ad8b72c',
+			'role_id' => '1',
 			'created_user_id' => null,
-			'created' => '2014-08-24 23:35:05',
+			'created' => '2014-08-24 23:42:08',
 			'modified_user_id' => null,
-			'modified' => '2014-08-24 23:35:05'
+			'modified' => '2014-08-24 23:42:08'
 		),
 		array(
-			'id' => '2',
-			'type' => '2',
+			'id' => 2,
+			'username' => 'admin2',
+			'password' => 'f14c95a14885415b30c8f3cd7603da0cfce5acdebaac646ee7c9b6928243e1f7871dde7eeb273de6314e431684723623490b7ce144697e00473872f01ad8b72c',
+			'role_id' => '1',
 			'created_user_id' => null,
-			'created' => '2014-08-24 23:35:05',
+			'created' => '2014-08-24 23:42:08',
 			'modified_user_id' => null,
-			'modified' => '2014-08-24 23:35:05'
-		),
-		array(
-			'id' => '3',
-			'type' => '2',
-			'created_user_id' => null,
-			'created' => '2014-08-24 23:35:05',
-			'modified_user_id' => null,
-			'modified' => '2014-08-24 23:35:05'
-		),
-		array(
-			'id' => '4',
-			'type' => '2',
-			'created_user_id' => null,
-			'created' => '2014-08-24 23:35:05',
-			'modified_user_id' => null,
-			'modified' => '2014-08-24 23:35:05'
-		),
-		array(
-			'id' => '5',
-			'type' => '2',
-			'created_user_id' => null,
-			'created' => '2014-08-24 23:35:05',
-			'modified_user_id' => null,
-			'modified' => '2014-08-24 23:35:05'
+			'modified' => '2014-08-24 23:42:08'
 		),
 	);
 

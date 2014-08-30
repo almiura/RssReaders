@@ -1,6 +1,6 @@
 <?php
 /**
- * LanguageFixture
+ * BlocksRssReaderFixture
  *
  * @author   Kosuke Miura <topaz2@m0n0m0n0.com>
  * @link     http://www.netcommons.org NetCommons Project
@@ -8,16 +8,9 @@
  */
 
 /**
- * Summary for LanguageFixture
+ * Summary for BlocksRssReaderFixture
  */
-class LanguageFixture extends CakeTestFixture {
-
-/**
- * Import
- *
- * @var array
- */
-	public $import = array('records' => true, 'connection' => 'master');
+class BlocksRssReaderFixture extends CakeTestFixture {
 
 /**
  * Fields
@@ -26,9 +19,7 @@ class LanguageFixture extends CakeTestFixture {
  */
 	public $fields = array(
 		'id' => array('type' => 'integer', 'null' => false, 'default' => null, 'key' => 'primary'),
-		'code' => array('type' => 'string', 'null' => true, 'default' => null, 'length' => 3, 'collate' => 'utf8_general_ci', 'charset' => 'utf8'),
-		'weight' => array('type' => 'integer', 'null' => true, 'default' => null),
-		'is_active' => array('type' => 'boolean', 'null' => true, 'default' => null),
+		'block_id' => array('type' => 'integer', 'null' => true, 'default' => null, 'comment' => 'blocksãƒ†ãƒ¼ãƒ–ãƒ«ã®fk'),
 		'created_user_id' => array('type' => 'integer', 'null' => true, 'default' => null),
 		'created' => array('type' => 'datetime', 'null' => true, 'default' => null),
 		'modified_user_id' => array('type' => 'integer', 'null' => true, 'default' => null),
@@ -37,6 +28,22 @@ class LanguageFixture extends CakeTestFixture {
 			'PRIMARY' => array('column' => 'id', 'unique' => 1)
 		),
 		'tableParameters' => array('charset' => 'utf8', 'collate' => 'utf8_general_ci', 'engine' => 'InnoDB')
+	);
+
+/**
+ * Records
+ *
+ * @var array
+ */
+	public $records = array(
+		array(
+			'id' => 1,
+			'block_id' => 1,
+			'created_user_id' => 1,
+			'created' => '2014-08-30 06:23:14',
+			'modified_user_id' => 1,
+			'modified' => '2014-08-30 06:23:14'
+		),
 	);
 
 }

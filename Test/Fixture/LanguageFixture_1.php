@@ -1,6 +1,6 @@
 <?php
 /**
- * PartFixture
+ * LanguageFixture
  *
  * @author   Takako Miyagawa <nekoget@gmail.com>
  * @link     http://www.netcommons.org NetCommons Project
@@ -8,9 +8,9 @@
  */
 
 /**
- * Summary for PartFixture
+ * Summary for LanguageFixture
  */
-class PartFixture extends CakeTestFixture {
+class LanguageFixture extends CakeTestFixture {
 
 /**
  * Import
@@ -26,7 +26,9 @@ class PartFixture extends CakeTestFixture {
  */
 	public $fields = array(
 		'id' => array('type' => 'integer', 'null' => false, 'default' => null, 'key' => 'primary'),
-		'type' => array('type' => 'integer', 'null' => true, 'default' => null),
+		'code' => array('type' => 'string', 'null' => true, 'default' => null, 'length' => 3, 'collate' => 'utf8_general_ci', 'charset' => 'utf8'),
+		'weight' => array('type' => 'integer', 'null' => true, 'default' => null),
+		'is_active' => array('type' => 'boolean', 'null' => true, 'default' => null),
 		'created_user_id' => array('type' => 'integer', 'null' => true, 'default' => null),
 		'created' => array('type' => 'datetime', 'null' => true, 'default' => null),
 		'modified_user_id' => array('type' => 'integer', 'null' => true, 'default' => null),
@@ -45,7 +47,9 @@ class PartFixture extends CakeTestFixture {
 	public $records = array(
 		array(
 			'id' => '1',
-			'type' => '2',
+			'code' => 'eng',
+			'weight' => '1',
+			'is_active' => 1,
 			'created_user_id' => null,
 			'created' => '2014-08-24 23:35:05',
 			'modified_user_id' => null,
@@ -53,31 +57,9 @@ class PartFixture extends CakeTestFixture {
 		),
 		array(
 			'id' => '2',
-			'type' => '2',
-			'created_user_id' => null,
-			'created' => '2014-08-24 23:35:05',
-			'modified_user_id' => null,
-			'modified' => '2014-08-24 23:35:05'
-		),
-		array(
-			'id' => '3',
-			'type' => '2',
-			'created_user_id' => null,
-			'created' => '2014-08-24 23:35:05',
-			'modified_user_id' => null,
-			'modified' => '2014-08-24 23:35:05'
-		),
-		array(
-			'id' => '4',
-			'type' => '2',
-			'created_user_id' => null,
-			'created' => '2014-08-24 23:35:05',
-			'modified_user_id' => null,
-			'modified' => '2014-08-24 23:35:05'
-		),
-		array(
-			'id' => '5',
-			'type' => '2',
+			'code' => 'jpn',
+			'weight' => '2',
+			'is_active' => 1,
 			'created_user_id' => null,
 			'created' => '2014-08-24 23:35:05',
 			'modified_user_id' => null,

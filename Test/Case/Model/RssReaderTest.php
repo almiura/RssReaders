@@ -28,13 +28,8 @@ class RssReaderTest extends CakeTestCase {
  */
 	public $fixtures = array(
 		'plugin.rss_readers.rss_reader',
-		'plugin.rss_readers.language',
-		'plugin.rss_readers.block',
-		'plugin.rss_readers.blocks_language',
-		'plugin.rss_readers.rss_readers_block',
-		'plugin.rss_readers.part',
-		'plugin.rss_readers.languages_part',
-		'plugin.rss_readers.rss_reader_part_setting'
+		'plugin.rss_readers.blocks_rss_reader',
+		'plugin.rss_readers.language'
 	);
 
 /**

@@ -2,15 +2,22 @@
 /**
  * LanguagesPartFixture
  *
- * @author Jun Nishikawa <topaz2@m0n0m0n0.com>
- * @link http://www.netcommons.org NetCommons Project
- * @license http://www.netcommons.org/license.txt NetCommons License
+ * @author   Takako Miyagawa <nekoget@gmail.com>
+ * @link     http://www.netcommons.org NetCommons Project
+ * @license  http://www.netcommons.org/license.txt NetCommons License
  */
 
 /**
  * Summary for LanguagesPartFixture
  */
 class LanguagesPartFixture extends CakeTestFixture {
+
+/**
+ * Import
+ *
+ * @var array
+ */
+	public $import = array('connection' => 'master');
 
 /**
  * Fields
@@ -39,35 +46,55 @@ class LanguagesPartFixture extends CakeTestFixture {
  */
 	public $records = array(
 		array(
-			'id' => 1,
-			'part_id' => 1,
-			'language_id' => 2,
+			'id' => '1',
+			'part_id' => '1',
+			'language_id' => '2',
 			'name' => 'ルーム管理者',
+			'created_user_id' => '1',
+			'created' => null,
+			'modified_user_id' => '1',
+			'modified' => null
 		),
 		array(
-			'id' => 2,
-			'part_id' => 2,
-			'language_id' => 2,
+			'id' => '2',
+			'part_id' => '2',
+			'language_id' => '2',
 			'name' => '編集長',
+			'created_user_id' => '1',
+			'created' => null,
+			'modified_user_id' => '1',
+			'modified' => null
 		),
 		array(
-			'id' => 3,
-			'part_id' => 3,
-			'language_id' => 2,
+			'id' => '3',
+			'part_id' => '3',
+			'language_id' => '2',
 			'name' => '編集者',
+			'created_user_id' => '1',
+			'created' => null,
+			'modified_user_id' => '1',
+			'modified' => null
 		),
 		array(
-			'id' => 4,
-			'part_id' => 4,
-			'language_id' => 2,
+			'id' => '4',
+			'part_id' => '4',
+			'language_id' => '2',
 			'name' => '一般',
+			'created_user_id' => '1',
+			'created' => null,
+			'modified_user_id' => '1',
+			'modified' => null
 		),
 		array(
-			'id' => 5,
-			'part_id' => 5,
-			'language_id' => 2,
+			'id' => '5',
+			'part_id' => '5',
+			'language_id' => '2',
 			'name' => '参観者',
-		)
+			'created_user_id' => '1',
+			'created' => null,
+			'modified_user_id' => '1',
+			'modified' => null
+		),
 	);
 
 }

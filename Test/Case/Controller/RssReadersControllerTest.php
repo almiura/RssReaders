@@ -30,6 +30,22 @@ class RssReadersControllerTest extends ControllerTestCase {
 		'app.Session',
 		'app.SiteSetting',
 		'app.SiteSettingValue',
+		'plugin.rss_readers.rss_reader',
+		'plugin.rss_readers.blocks_rss_reader',
+		'plugin.rss_readers.language',
+		'plugin.rss_readers.page',
+		'plugin.rss_readers.block',
+		'plugin.rss_readers.part',
+		'plugin.rss_readers.room_part',
+		'plugin.rss_readers.languages_part',
+		'plugin.rss_readers.language',
+		'plugin.rss_readers.frame',
+		'plugin.rss_readers.parts_rooms_user',
+		'plugin.rss_readers.box',
+		'plugin.rss_readers.plugin',
+		'plugin.rss_readers.room',
+		'plugin.rss_readers.user',
+		'plugin.rss_readers.frames_language'
 	);
 
 /**
