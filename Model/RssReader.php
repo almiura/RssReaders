@@ -54,7 +54,11 @@ class RssReader extends RssReadersAppModel {
 				'order' => array($this->name . '.id DESC')
 			)
 		);
-
+		if (isset($contentData[$this->name]['url']) && $contentData[$this->name]['url']) {
+			$xml = Xml::build($contentData[$this->name]['url']);
+			$xml = Xml::toArray($xml);
+			$contentData[$this->name]['xml'] = $xml;
+		}
 		return $contentData;
 	}
 }

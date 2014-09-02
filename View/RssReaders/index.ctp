@@ -9,6 +9,23 @@
  * @copyright Copyright 2014, NetCommons Project
  * @package app.Plugin.RssReaders.View.RssReaders
  */
-?>
 
-RssReaders index
+if (isset($content['RssReader']['xml']['rss']['channel'])) {
+	$rss = $content['RssReader']['xml']['rss']['channel'];
+}
+$title = '';
+if (isset($rss['title'])) {
+	$title = $rss['title'];
+}
+
+?>
+<h3><?php echo h($title); ?></h3>
+
+<?php
+//var_dump($rss);
+if (isset($rss['item']) && $rss['item']) {
+	foreach($rss['item'] as $key => $item) {
+	}
+}
+
+?>

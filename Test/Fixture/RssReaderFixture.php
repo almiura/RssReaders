@@ -42,9 +42,9 @@ class RssReaderFixture extends CakeTestFixture {
 		array(
 			'id' => 1,
 			'blocks_rss_reader_id' => 1,
-			'url' => 'Lorem ipsum dolor sit amet, aliquet feugiat. Convallis morbi fringilla gravida, phasellus feugiat dapibus velit nunc, pulvinar eget sollicitudin venenatis cum nullam, vivamus ut a sed, mollitia lectus. Nulla vestibulum massa neque ut et, id hendrerit sit, feugiat in taciti enim proin nibh, tempor dignissim, rhoncus duis vestibulum nunc mattis convallis.',
+			'url' => '/var/www/app/app/Plugin/RssReaders/Test/Fixture/rss.xml',
 			'status' => 1,
-			'rss' => 'Lorem ipsum dolor sit amet, aliquet feugiat. Convallis morbi fringilla gravida, phasellus feugiat dapibus velit nunc, pulvinar eget sollicitudin venenatis cum nullam, vivamus ut a sed, mollitia lectus. Nulla vestibulum massa neque ut et, id hendrerit sit, feugiat in taciti enim proin nibh, tempor dignissim, rhoncus duis vestibulum nunc mattis convallis.',
+			'rss' => '',
 			'created_user' => 1,
 			'created' => '2014-08-30 06:19:18',
 			'modified_user' => 1,

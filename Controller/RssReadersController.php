@@ -26,7 +26,7 @@ class RssReadersController extends RssReadersAppController {
  * @author Kosuke Miura <k_miura@zenk.co.jp>
  * @var array
  */
-	//public $uses = array();
+	public $uses = array('RssReaders.RssReader');
 
 /**
  * beforeFilter
@@ -52,6 +52,8 @@ class RssReadersController extends RssReadersAppController {
 		if (! $this->_initializeFrame($frameId, $lang)) {
 			return $this->render(false);
 		}
+		$content = $this->RssReader->getContent($this->viewVars['blockId']);
+		$this->set('content', $content);
 
 		return $this->render('RssReaders/index');
 	}
